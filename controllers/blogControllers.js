@@ -25,6 +25,10 @@ const Blog = require ('../models/blog');
         res.render('create' , {title : 'Create a new blog'});
     }
 
+    module.exports.about_get = (req , res) =>{
+        res.render ('about' , {title : 'About'});
+    }
+
     module.exports.blogs_id_get = (req , res) =>{
         const id = req.params.id;
         Blog.findById(id)
@@ -46,7 +50,4 @@ const Blog = require ('../models/blog');
             console.log (err);
         })
     }
-
-    module.exports.about_get = (req , res) =>{
-        res.render ('about' , {title : 'About'});
-    }
+  

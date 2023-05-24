@@ -16,6 +16,7 @@
 
   <script>
     const trashcan = document.querySelector('a.delete');
+    const upate = document.querySelector('a.update');
 
     trashcan.addEventListener('click', (e) => {
       const endpoint = `/blogs/${trashcan.dataset.doc}`;
@@ -27,7 +28,8 @@
       .then(data => window.location.href = data.redirect)
       .catch(err => console.log(err));
     });
-    
+
+
   </script>
 </body>
 </html>

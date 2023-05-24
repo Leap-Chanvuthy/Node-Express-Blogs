@@ -18,9 +18,7 @@ const blogControllers = require('../controllers/blogControllers')
 
    router.delete ('/blogs/:id' , blogControllers.blogs_id_delete);
 
-    router.get ('/about' , (req , res) => {
-      
-    });
+   router.get ('/about' , blogControllers.about_get);
 
     router.use ((req , res) => {
         res.status(404).render('404' , {title : '404'});
